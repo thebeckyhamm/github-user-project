@@ -1,6 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { getUsers } from "./utils/api";
+import UserSearch from "./components/UserSearch";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className='App-header'>
         <h1>Github Users</h1>
       </header>
+      <UserSearch />
     </div>
   );
 }
