@@ -28,6 +28,9 @@ export default function UserSearch() {
         placeholder='Search for a user'
         value={queryString}
         onChange={(e) => setQueryString(e.target.value)}
+        onKeyPress={(e) => {
+          e.key === "Enter" && setSearch(queryString);
+        }}
       />
       <button onClick={() => setSearch(queryString)}>Search</button>
       {loading && <h3>Loading</h3>}
