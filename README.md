@@ -4,10 +4,10 @@ Below are some items taken from the instructions, with comments. You should be a
 
 A user of your app should be able to:
 
-- [ ] Search for users of github in an input field
+- [x] Search for users of github in an input field
 - [ ] Sort by the following as supported by the Github API: followers, repositories, date joined
 - [ ] Order results by ascending and descending
-- [ ] View the top 20 results including avatar and login
+- [x] View the top 20 results including avatar and login
 - [ ] View a single result: avatar, login, following, followers, repos (limit 5), link to user
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
