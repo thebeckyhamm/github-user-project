@@ -376,6 +376,10 @@ code {
   flex: 1;
 }
 
+.flex--align-center {
+  align-items: center;
+}
+
 .visually-hidden {
   position: absolute !important;
   height: 1px;

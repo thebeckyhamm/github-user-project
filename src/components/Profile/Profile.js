@@ -48,15 +48,15 @@ export default function Profile() {
   }
 
   return (
-    <div>
-      <div className='flex'>
+    <div className='profile'>
+      <div className='flex flex--align-center'>
         <img
           className='profile__img p--r-1'
           src={user.avatar_url}
           alt={`Profile avatar for ${user.login}`}
         />
         <div>
-          <h1>{user.login}</h1>
+          <h1 className='profile__title'>{user.login}</h1>
           {user.bio && <p>{user.bio}</p>}
           {user.blog && (
             <p>

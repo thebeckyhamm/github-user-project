@@ -1,4 +1,9 @@
 .profile {
+  background-color: white;
+  padding: 2rem;
+  &__title {
+    margin: 0;
+  }
   &__img {
     display: block;
     width: 100px;
