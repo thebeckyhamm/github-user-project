@@ -1,0 +1,19 @@
+.app {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #111;
+  padding: 0.5rem;
+  &__text {
+    color: white;
+    margin: 0;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 50vw;
+  padding: 3rem 0;
+}

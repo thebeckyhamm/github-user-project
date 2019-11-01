@@ -1,14 +1,16 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Users from "./components/Users/Users";
 
 function App() {
   return (
     <div className='app'>
-      <header>
-        <h1>Github Users</h1>
+      <header className='header'>
+        <h1 className='header__text'>Github Users</h1>
       </header>
-      <Users />
+      <div className='wrapper'>
+        <Users />
+      </div>
     </div>
   );
 }

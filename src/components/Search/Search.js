@@ -1,12 +1,14 @@
 import React from "react";
+import "./Search.scss";
 
 export default function Search({ handleSearch }) {
   const [queryString, setQueryString] = React.useState("");
 
   return (
-    <React.Fragment>
+    <div className='search'>
       <input
         type='text'
+        className='search__input'
         placeholder='Search for a user'
         value={queryString}
         onChange={(e) => setQueryString(e.target.value)}
@@ -14,7 +16,11 @@ export default function Search({ handleSearch }) {
           e.key === "Enter" && handleSearch(queryString);
         }}
       />
-      <button onClick={() => handleSearch(queryString)}>Search</button>
-    </React.Fragment>
+      <button
+        className='search__submit'
+        onClick={() => handleSearch(queryString)}>
+        Search
+      </button>
+    </div>
   );
 }

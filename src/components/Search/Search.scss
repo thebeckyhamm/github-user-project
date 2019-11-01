@@ -1,0 +1,17 @@
+.search {
+  display: flex;
+  width: 100%;
+  &__input {
+    border: 1px solid #ddd;
+    flex: 1;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  &__submit {
+    background-color: #fed833;
+    border: 1px solid #fed833;
+    color: #333;
+    padding: 0.5rem;
+  }
+}

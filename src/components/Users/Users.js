@@ -1,7 +1,7 @@
 import React from "react";
 import { getUsers } from "../../utils/api";
 import Search from "../Search/Search";
-import "./Users.css";
+import "./Users.scss";
 
 export default function Users() {
   const [results, setResults] = React.useState([]);
