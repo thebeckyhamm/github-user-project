@@ -1,6 +1,7 @@
 import React from "react";
 import { getUsers } from "../../utils/api";
 import Search from "../Search/Search";
+import { Link } from "react-router-dom";
 import "./Users.scss";
 
 export default function Users() {
@@ -32,8 +33,10 @@ export default function Users() {
           {results.map(({ login, id, avatar_url }) => {
             return (
               <li className='results__item' key={id}>
-                <img className='results__img' src={avatar_url} alt={login} />
-                <span className='results__username'>{login}</span>
+                <Link to={`user/profile/${login}`}>
+                  <img className='results__img' src={avatar_url} alt={login} />
+                  <span className='results__username'>{login}</span>
+                </Link>
               </li>
             );
           })}

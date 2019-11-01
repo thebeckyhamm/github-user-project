@@ -14,7 +14,7 @@ function App() {
         <Router>
           <Switch>
             <Route path='/search/users' component={Users} />
-            <Route path='/user/profile' component={Profile} />
+            <Route path='/user/profile/:login' component={Profile} />
             <Route component={Users} />
           </Switch>
         </Router>

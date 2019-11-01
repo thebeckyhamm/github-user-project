@@ -1,6 +1,8 @@
 import React from "react";
 import "./Profile.scss";
+import { useParams } from "react-router-dom";
 
 export default function Profile() {
-  return <h1>test</h1>;
+  const { login } = useParams();
+  return <h1>{login}</h1>;
 }
