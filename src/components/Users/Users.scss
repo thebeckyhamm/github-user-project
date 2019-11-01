@@ -6,10 +6,16 @@
   &__item {
     align-items: center;
     background-color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     margin: 0.5rem 0;
     padding: 1rem;
+    &:hover,
+    &:focus {
+      border-color: black;
+    }
   }
 
   &__img {
