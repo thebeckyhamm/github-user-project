@@ -33,7 +33,9 @@ export default function Users() {
           {results.map(({ login, id, avatar_url }) => {
             return (
               <li className='results__item' key={id}>
-                <Link to={`user/profile/${login}`}>
+                <Link
+                  to={`user/profile/${login}`}
+                  className='flex flex--align-center results__link'>
                   <img className='results__img' src={avatar_url} alt={login} />
                   <span className='results__username'>{login}</span>
                 </Link>

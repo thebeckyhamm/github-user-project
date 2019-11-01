@@ -21,6 +21,7 @@ export default function Profile() {
 
     Promise.all([userData, followerData, followingData, repoData])
       .then((data) => {
+        console.log(data);
         setUser(data[0]);
         setFollowers(data[1]);
         setFollowing(data[2]);
@@ -28,7 +29,9 @@ export default function Profile() {
         setLoading(false);
       })
       .catch((error) => {
+        console.log(error);
         setError(error.message);
+        setLoading(false);
       });
   }, [login]);
 
@@ -48,19 +51,28 @@ export default function Profile() {
   }
 
   return (
-    <div className='profile'>
+    <section className='profile'>
       <div className='flex flex--align-center'>
-        <img
-          className='profile__img p--r-1'
-          src={user.avatar_url}
-          alt={`Profile avatar for ${user.login}`}
-        />
         <div>
-          <h1 className='profile__title'>{user.login}</h1>
+          <img
+            className='profile__img p--r-1'
+            src={user.avatar_url}
+            alt={`Profile avatar for ${user.login}`}
+          />
+        </div>
+        <div>
+          <h1 className='profile__title'>
+            <a className='profile__link' href={user.html_url} target='_blank'>
+              {user.login}
+            </a>
+          </h1>
           {user.bio && <p>{user.bio}</p>}
           {user.blog && (
             <p>
-              <strong>Website:</strong> {user.blog}
+              <strong>Website:</strong>{" "}
+              <a className='profile__link' href={user.blog} target='_blank'>
+                {user.blog}
+              </a>
             </p>
           )}
         </div>
@@ -103,6 +115,6 @@ export default function Profile() {
           <p>This user has no repos.</p>
         )}
       </div>
-    </div>
+    </section>
   );
 }

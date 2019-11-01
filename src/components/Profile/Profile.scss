@@ -9,4 +9,12 @@
     width: 100px;
     height: 100px;
   }
+  &__link {
+    color: black;
+    &:hover,
+    &:focus {
+      background-color: #fed833;
+      text-decoration: none;
+    }
+  }
 }
