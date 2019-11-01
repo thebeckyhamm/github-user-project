@@ -15,6 +15,7 @@ I bootstrapped this with [Create React App](https://github.com/facebook/create-r
 ### Things I would have liked to do if I had more time
 
 - Get proper error handling for GitHub's rate limiting
+- Make sure it is responsive
 - Make more reusable components (ex: Followers, Following, and Repos could all be one reused component)
 - Focus more on a11y
 - Make more reusable CSS styles
