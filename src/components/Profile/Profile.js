@@ -21,7 +21,6 @@ export default function Profile() {
 
     Promise.all([userData, followerData, followingData, repoData])
       .then((data) => {
-        console.log(data);
         setUser(data[0]);
         setFollowers(data[1]);
         setFollowing(data[2]);
@@ -29,7 +28,6 @@ export default function Profile() {
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
         setError(error.message);
         setLoading(false);
       });
@@ -62,7 +60,11 @@ export default function Profile() {
         </div>
         <div>
           <h1 className='profile__title'>
-            <a className='profile__link' href={user.html_url} target='_blank'>
+            <a
+              className='profile__link'
+              href={user.html_url}
+              target='_blank'
+              rel='noopener noreferrer'>
               {user.login}
             </a>
           </h1>
@@ -70,7 +72,11 @@ export default function Profile() {
           {user.blog && (
             <p>
               <strong>Website:</strong>{" "}
-              <a className='profile__link' href={user.blog} target='_blank'>
+              <a
+                className='profile__link'
+                href={user.blog}
+                target='_blank'
+                rel='noopener noreferrer'>
                 {user.blog}
               </a>
             </p>
