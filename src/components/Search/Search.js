@@ -25,7 +25,7 @@ export default function Search({ handleSearch }) {
           }}
         />
         <div className='flex'>
-          <div className='flex--1'>
+          <div className='flex--1 p--r-1'>
             <label className='search__label' htmlFor='sorting'>
               Sort by:
             </label>
