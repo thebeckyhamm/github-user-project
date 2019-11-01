@@ -6,21 +6,26 @@ import "./Users.scss";
 export default function Users() {
   const [results, setResults] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
-  const [queryString, setQueryString] = React.useState("");
+  const [searchParams, setSearchParams] = React.useState({
+    queryString: "",
+    sort: "",
+    order: "desc"
+  });
 
   React.useEffect(() => {
-    if (!!queryString) {
+    if (searchParams.queryString) {
       setLoading(true);
-      getUsers(queryString).then((data) => {
+      setResults([]);
+      getUsers(searchParams).then((data) => {
         setResults(data.items);
         setLoading(false);
       });
     }
-  }, [queryString]);
+  }, [searchParams]);
 
   return (
     <React.Fragment>
-      <Search handleSearch={setQueryString} />
+      <Search handleSearch={setSearchParams} />
       {loading && <h3>Loading</h3>}
       {results && (
         <ul className='results'>
