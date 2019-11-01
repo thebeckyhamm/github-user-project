@@ -5,12 +5,27 @@ Below are some items taken from the instructions, with comments. You should be a
 A user of your app should be able to:
 
 - [x] Search for users of github in an input field
-- [ ] Sort by the following as supported by the Github API: followers, repositories, date joined
-- [ ] Order results by ascending and descending
+- [x] Sort by the following as supported by the Github API: followers, repositories, date joined
+- [x] Order results by ascending and descending
 - [x] View the top 20 results including avatar and login
-- [ ] View a single result: avatar, login, following, followers, repos (limit 5), link to user
+- [x] View a single result: avatar, login, following, followers, repos (limit 5), link to user
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I bootstrapped this with [Create React App](https://github.com/facebook/create-react-app).
+
+### Things I would have liked to do if I had more time
+
+- Get proper error handling for GitHub's rate limiting
+- Make more reusable components (ex: Followers, Following, and Repos could all be one reused component)
+- Focus more on a11y
+- Make more reusable CSS styles
+- Code splitting with `React.lazy` and `React.Suspense`
+- Use React Hooks more extensively (I'm in the middle of learning this)
+- Use API v4.0 (using GraphQL)
+- Integrate TypeScript and/or PropTypes
+
+Thanks and let me know if you have any questions!!
+
+---
 
 ## Available Scripts
 
